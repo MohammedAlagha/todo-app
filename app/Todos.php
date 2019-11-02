@@ -14,7 +14,4 @@ class Todos extends Model
         'title','decription','completed',
     ];
 
-
-
-
 }
