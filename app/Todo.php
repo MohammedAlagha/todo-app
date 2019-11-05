@@ -14,7 +14,4 @@ class Todo extends Model
         'title','decription','completed',
     ];
 
-
-
-
 }
