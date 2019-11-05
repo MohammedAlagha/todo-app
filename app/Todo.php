@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
 
-class Todos extends Model
+class Todo extends Model
 {
     use Notifiable;
 
