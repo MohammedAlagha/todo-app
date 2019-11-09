@@ -10,8 +10,11 @@ class Todo extends Model
 {
     use Notifiable;
 
+    protected $attributes = [
+        'completed'=>false
+    ];
     protected $fillable = [
-        'title','decription','completed',
+        'title','description'
     ];
 
 }
