@@ -12,7 +12,7 @@
                     <h2 style="font-family: 'Source Sans Pro', sans-serif;">Edit todo</h2>
                     </div>
                     <div class="card-body">
-                        {!! Form::open(['action'=>['TodoController@update',$todo->id],'method'=>'PUT']) !!}
+                        {!! Form::open(['url'=>route('todo.update',$todo->id),'method'=>'PUT']) !!}
                        <div class="form-group" >
                        <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="@if($errors->any()){{old('title')}}@else{{$todo->title}}@endif">
                        </div>

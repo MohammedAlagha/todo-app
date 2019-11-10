@@ -15,5 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('todos','TodoController');
+Route::resource('todos','TodoController')->names([
+    'index'  => 'todo.index' ,
+    'create' => 'todo.create',
+    'store'  => 'todo.store' ,
+    'show'   => 'todo.show'  ,
+    'edit'   => 'todo.edit'  ,
+    'update' => 'todo.update',
+    'destroy'=> 'todo.destroy'
+]);
 

@@ -11,7 +11,7 @@
                     <h2 style="font-family: 'Source Sans Pro', sans-serif;">Create a new todo</h2>
                 </div>
                 <div class="card-body">
-                   {!! Form::open(['action'=>'TodoController@store', 'method'=>'post']) !!}
+                   {!! Form::open(['url'=>route('todo.store'), 'method'=>'post']) !!}
                    <div class="form-group">
                     <input type="text" class="form-control" name="title" placeholder="Enter Todo Title">
                    </div>

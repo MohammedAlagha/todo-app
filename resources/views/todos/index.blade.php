@@ -15,15 +15,15 @@
                             <li class='list-group-item text-muted'>
                             {{$todo->title}}
                             <span class='float-right mr-2'>
-                                 {!! Form::open(['action'=>['TodoController@destroy',$todo->id],'method'=>'DELETE']) !!}
+                                 {!! Form::open(['url'=>route('todo.destroy',$todo->id),'method'=>'DELETE']) !!}
                                      <a href="javascript:void(0)" style='color:#ff1313' class='submit'><i class='fa fa-trash-o' aria-hidden='true'></i></a>
                                  {!! Form::close() !!}
                                     </span>
                             <span class='float-right mr-2'>
-                                <a href="/todos/{{$todo->id}}/edit" style='color:#46ab4a'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></a>
+                            <a href= "{{route('todo.edit', $todo->id)}}" style='color:#46ab4a'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></a>
                             </span>
                             <span class="float-right mr-2">
-                            <a href="/todos/{{$todo->id}}" style='color:#1198d6'><i class="fa fa-eye" area-hidden='true'></i></a>
+                            <a href="{{route('todo.show', $todo->id)}}" style='color:#1198d6'><i class="fa fa-eye" area-hidden='true'></i></a>
                             </span>
                             </li>
                         @empty
