@@ -15,7 +15,7 @@ Open source simple todos Laravel 6 .
  - rename env.example to .env file and set your db connection data
  - run composer install
  - run php artisan key:generate
- -run command "php artisan migrate"
+ - run command "php artisan migrate"
  
    
 ### Server Requirements
