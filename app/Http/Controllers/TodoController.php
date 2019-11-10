@@ -26,6 +26,7 @@ class TodoController extends Controller
 
         Todo::create(['title'=>$request->title,'description'=>$request->description]);
 
+        $request->session()->flash('success','Todo created successfully');
         return redirect('todos');
     }
 
@@ -46,6 +47,7 @@ class TodoController extends Controller
 
         $todo->update($request->all());
 
+        session()->flash('success','todo updated successfully');
         return redirect('todos');
     }
 
@@ -58,6 +60,7 @@ class TodoController extends Controller
     public function destroy(Todo $todo)
     {
         Todo::destroy($todo->id);
+        session()->flash('success','todo deleted successfully');
         return redirect('todos');
     }
 }
