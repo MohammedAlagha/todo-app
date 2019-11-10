@@ -42,7 +42,7 @@ class TodoRequest extends FormRequest
                     'title'=>'required|min:4',
                     'description' =>'required|min:10'
                 ];
-                break;
+            break;
         }
     }
 }

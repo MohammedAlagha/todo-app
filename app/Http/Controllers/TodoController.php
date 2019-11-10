@@ -30,23 +30,22 @@ class TodoController extends Controller
     }
 
 
-    public function show($id)
+    public function show(Todo $todo)
     {
-        $todo = Todo::find($id);
+
         return view("todos.show",compact('todo'));
     }
 
-    public function edit($id)
+    public function edit(Todo $todo)
     {
-        $todo= Todo::find($id);
         return view('todos.edit',compact('todo'));
     }
 
-    public function update(TodoRequest $request, $id)
+    public function update(TodoRequest $request, Todo $todo)
     {
 
-        Todo::find($id)->update($request->all());
-     
+        $todo->update($request->all());
+
         return redirect('todos');
     }
 
@@ -56,9 +55,9 @@ class TodoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Todo $todo)
     {
-        Todo::destroy($id);
+        Todo::destroy($todo->id);
         return redirect('todos');
     }
 }
