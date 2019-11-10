@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::resource('todos','TodoController')->names([
-    'index'  => 'todo.index' ,
+    'index'  => 'todos.index' ,
     'create' => 'todo.create',
     'store'  => 'todo.store' ,
     'show'   => 'todo.show'  ,
@@ -24,4 +24,6 @@ Route::resource('todos','TodoController')->names([
     'update' => 'todo.update',
     'destroy'=> 'todo.destroy'
 ]);
+
+Route::get('/todos/{todo}/complete','TodoController@complete')->name('todo.complete');
 

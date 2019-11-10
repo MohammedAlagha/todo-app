@@ -30,6 +30,11 @@
                             <span class="float-right mr-2">
                             <a href="{{route('todo.show', $todo->id)}}" style='color:#1198d6'><i class="fa fa-eye" area-hidden='true'></i></a>
                             </span>
+                            @if (!$todo->completed)
+                            <span class="float-right mr-2">
+                                <a href="{{route('todo.complete', $todo->id)}}" style='color:#00bcd4'><i class="fa fa-check-square" area-hidden='true'></i></a>
+                            </span>
+                            @endif
                             </li>
                         @empty
                             <p class='text-center'>No Todos.</p>

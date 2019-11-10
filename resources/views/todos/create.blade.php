@@ -7,7 +7,7 @@
     <div class="row justify-content-center mt-5">
         <div class="col-md-6">
             <div class="card">
-                <div class="card header pl-4">
+                <div class="card header text-center pl-4">
                     <h2 style="font-family: 'Source Sans Pro', sans-serif;">Create a new todo</h2>
                 </div>
                 <div class="card-body">

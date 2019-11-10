@@ -14,7 +14,7 @@ class Todo extends Model
         'completed'=>false
     ];
     protected $fillable = [
-        'title','description'
+        'title','description','completed'
     ];
 
 }

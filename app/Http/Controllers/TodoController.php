@@ -30,6 +30,17 @@ class TodoController extends Controller
         return redirect('todos');
     }
 
+    public function complete(Todo $todo){
+
+
+        $todo->update(['completed'=>true]);
+
+        session()->flash('success','Todo completed successfully');
+
+        return redirect()->route('todos.index');
+
+    }
+
 
     public function show(Todo $todo)
     {
@@ -48,19 +59,18 @@ class TodoController extends Controller
         $todo->update($request->all());
 
         session()->flash('success','todo updated successfully');
-        return redirect('todos');
+
+        return redirect()->route('todos.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Todo $todo)
     {
         Todo::destroy($todo->id);
         session()->flash('success','todo deleted successfully');
-        return redirect('todos');
+        return redirect()->route('todos.index');
     }
+
+
+
 }
