@@ -5,7 +5,7 @@
 Open source simple todos Laravel 6 .
 
 ## Version
-6 - Bootstrap 4
+laravel 6 - Bootstrap 4
 
 
 
